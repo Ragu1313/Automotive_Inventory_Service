@@ -1,8 +1,9 @@
 function BrandCard({ brand }) {
   return (
-    <button className="flex h-[64px] items-center justify-center rounded-xl border border-blue-400/20 bg-[#0a2345]/60 px-5 transition duration-300 hover:-translate-y-1 hover:border-blue-400/50 hover:bg-[#0d2d56]">
+    <button className="flex min-w-0 h-[68px] items-center justify-center overflow-hidden rounded-xl border border-blue-400/20 bg-[#0a2345]/60 px-3 transition duration-300 hover:-translate-y-1 hover:border-blue-400/50 hover:bg-[#0d2d56] sm:px-5">
+
       <span
-        className={`text-lg font-extrabold tracking-tight ${
+        className={`truncate text-base font-extrabold tracking-tight sm:text-lg ${
           brand === "BOSCH"
             ? "text-red-500"
             : brand === "DENSO"
@@ -22,6 +23,7 @@ function BrandCard({ brand }) {
       >
         {brand}
       </span>
+
     </button>
   );
 }

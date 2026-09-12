@@ -7,9 +7,9 @@ import {
 
 function Hero() {
   return (
-    <section className="relative h-[327px] overflow-hidden rounded-t-xl border border-white/10">
+    <section className="relative min-h-[360px] overflow-hidden border-x border-b border-white/10 sm:min-h-[390px]">
 
-      {/* Car background */}
+      {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -18,74 +18,96 @@ function Hero() {
         }}
       />
 
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#03172f] via-[#061b36]/95 via-50% to-transparent" />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#03172f] via-[#061b36]/95 via-55% to-[#061b36]/30" />
 
       {/* Content */}
-      <div className="relative z-10 flex h-full items-center">
+      <div className="relative z-10 flex min-h-[360px] items-center px-5 py-10 sm:min-h-[390px] sm:px-8 lg:px-11">
 
-        <div className="ml-11 max-w-[520px]">
+        <div className="w-full max-w-[560px]">
 
-          <p className="mb-3 text-[11px] font-semibold tracking-[0.28em] text-blue-400">
+          {/* Eyebrow */}
+          <p className="mb-3 text-[9px] font-semibold tracking-[0.25em] text-blue-400 sm:text-[10px]">
             WELCOME TO MOTOVAULT
           </p>
 
-          <h1 className="text-4xl font-extrabold leading-[1.05]">
+          {/* Heading */}
+          <h1 className="text-3xl font-extrabold leading-[1.08] tracking-tight sm:text-4xl lg:text-5xl">
+
             Genuine Parts for
+
             <span className="block text-blue-500">
               Every Journey
             </span>
+
           </h1>
 
-          <p className="mt-4 max-w-[390px] text-sm leading-6 text-slate-300">
+          {/* Description */}
+          <p className="mt-4 max-w-[430px] text-xs leading-5 text-slate-300 sm:text-sm sm:leading-6">
             Find the right parts, from trusted brands,
             for every vehicle. Fast. Reliable. Always.
           </p>
 
-          {/* Search */}
-          <div className="mt-5 flex h-11 w-[500px] max-w-full overflow-hidden rounded-xl border border-blue-400/30 bg-[#09244a]/80 backdrop-blur-xl">
 
-            <div className="flex flex-1 items-center">
+          {/* Search */}
+          <div className="mt-6 flex w-full max-w-[540px] overflow-hidden rounded-xl border border-blue-400/30 bg-[#09244a]/90 p-1 backdrop-blur-xl">
+
+            <div className="flex min-w-0 flex-1 items-center">
 
               <Search
                 size={18}
-                className="ml-4 text-slate-400"
+                className="ml-3 shrink-0 text-slate-400"
               />
 
               <input
                 type="text"
                 placeholder="Search parts, brands, OEM numbers..."
-                className="w-full bg-transparent px-3 text-xs text-white outline-none placeholder:text-slate-500"
+                className="min-w-0 flex-1 bg-transparent px-3 py-3 text-xs text-white outline-none placeholder:text-slate-500 sm:text-sm"
               />
 
             </div>
 
-            <button className="m-1 rounded-lg bg-[#ed6a27] px-7 text-xs font-semibold transition hover:bg-[#ff7830]">
+            <button className="shrink-0 rounded-lg bg-[#ed6a27] px-5 text-xs font-semibold transition hover:bg-[#ff7830] sm:px-7 sm:text-sm">
               Search
             </button>
 
           </div>
 
+
           {/* Benefits */}
-          <div className="mt-5 flex gap-8">
+          <div className="mt-5 flex flex-wrap gap-x-6 gap-y-3">
 
             <div className="flex items-center gap-2">
-              <ShieldCheck size={18} className="text-blue-400" />
-              <span className="text-[11px] text-slate-300">
+              <ShieldCheck
+                size={17}
+                className="shrink-0 text-blue-400"
+              />
+
+              <span className="text-[10px] text-slate-300 sm:text-[11px]">
                 100% Genuine Parts
               </span>
             </div>
 
+
             <div className="flex items-center gap-2">
-              <Truck size={18} className="text-blue-400" />
-              <span className="text-[11px] text-slate-300">
+              <Truck
+                size={17}
+                className="shrink-0 text-blue-400"
+              />
+
+              <span className="text-[10px] text-slate-300 sm:text-[11px]">
                 Fast Delivery
               </span>
             </div>
 
+
             <div className="flex items-center gap-2">
-              <BadgeCheck size={18} className="text-blue-400" />
-              <span className="text-[11px] text-slate-300">
+              <BadgeCheck
+                size={17}
+                className="shrink-0 text-blue-400"
+              />
+
+              <span className="text-[10px] text-slate-300 sm:text-[11px]">
                 Trusted Brands
               </span>
             </div>
@@ -94,10 +116,11 @@ function Hero() {
 
         </div>
 
-        {/* Right slogan */}
-        <div className="absolute right-12 top-12 hidden xl:block">
 
-          <h2 className="max-w-[120px] text-2xl font-bold leading-tight">
+        {/* Right slogan */}
+        <div className="absolute right-8 top-10 hidden xl:block 2xl:right-14">
+
+          <h2 className="max-w-[130px] text-2xl font-bold leading-tight">
             DRIVE
             <br />
             BETTER

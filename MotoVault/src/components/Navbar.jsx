@@ -37,7 +37,7 @@ function Navbar() {
       <div className="flex h-full items-center">
 
         {/* Logo */}
-        <div className="flex w-[243px] shrink-0 items-center px-7">
+        <div className="flex w-[243px] shrink-0 items-center px-6">
           <div>
             <div className="text-[28px] font-extrabold tracking-tight">
               Moto<span className="text-blue-500">Vault</span>
@@ -50,7 +50,7 @@ function Navbar() {
         </div>
 
         {/* Navigation */}
-        <nav className="flex h-full items-center gap-2">
+        <nav className="hidden h-full items-center gap-1 xl:flex">
           {navItems.map((item, index) => {
             const Icon = item.icon;
 

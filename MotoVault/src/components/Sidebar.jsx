@@ -14,7 +14,7 @@ function Sidebar() {
       <div className="flex h-full flex-col px-5 py-8">
 
         {/* Menu */}
-        <div className="space-y-2">
+        <div className="space-y-1">
 
           <button className="flex w-full items-center gap-4 rounded-xl border border-blue-400/30 bg-blue-600/20 px-5 py-3.5 text-sm font-medium text-white shadow-lg shadow-blue-950/20">
             <Home size={19} className="text-blue-400" />
